@@ -1,0 +1,55 @@
+﻿Coder:
++ Code mà đéo tư duy nhận dự án và code như một thằng điên
++ Lương thấp
++ Giỏi hơn Developer sự thật 
++ Khổ hơn ( đùa ) khổ code nhưng nhàn tư duy.
++ Biết sử dụng AI,PS,DW,Id,Xd nhưng k biết các bước hoạt động
+Developer:
++ Ngược lại
++ Yêu cầu:
+ ---- Hiểu hệ thống
+ ---- Vạch được đường đi nước bước cho dự án
+ ---- Phân tích dữ liệu tốt
+ ---- Quản lí source code tốt
+ ---- Nói tốt 
+
+========================================================================================================================
+How to issues:
+
++ Chém gió cùng khách hàng lấy yêu cầu. Hôm nay làm về messenger same facebook.
++ quyết định design partern theo cách nào? ( VD: thiết kế theo mô hình nào? Source code dựa trên nguyên lí nào?...
++ Phân tích thiết kế ( thiết kế csdl và thiết kế giao diện và các bước hoạt động).
++ Thì quay lại bước 2
++ Lao vào thiết kế ( trên các phần mềm chuyên dụng )
++ Bắt đầu test csdl 
++ Code
+
+Có 4 phần quan trọng: IDE, Design Sofware, Issues Software, Person
+IDE: Sublime text.
+Design Software: Adobe XD
+Issues Sofware: Usecase stuido 2, IBM Rose Rational.
+Person: Customer and Tester.
+
+
++ Phần meseenger:
+Khi người dùng login trang của mình và ấn vào Appchat thì hệ thống sẽ chuyển sang giao diện Appchat. 
++ Chat với người muốn chat
++ Cho phép người dùng gọi điện với nhau
++ Cho phép người dùng gọi điện video với nhau.
++ Cho phép người dùng upload file.
++ Cho phép người dùng chat bằng icon.
++ Cho phép lien hệ với admin.
+
++ Sử dụng hai phần 
+B1: Chúng ta sẽ tạo dựng usecase ( là một usecase bao gồm use và case: use là ai sử dụng case là hành động sử dung: là một sơ đồ miêu tả hành động của người dùng )
+B2: Chúng ta sẽ mô tả chi tiết use case bằng luồng trực tiêp và rẽ nhánh. ( Luồng trực tiếp là luồng các bước người dùng thực hiện từ lúc bắt đầu đến khi kết thúc mà không gặp lỗi, còn luồng rẽ nhành là các lỗi mà người dùng gặp phải ).
+B3: Mô hình hóa usecase bằng giao diện -> phần mềm sẽ tự động xuất ra một bản đầy đủ các bước của hệ thống.
+B4: Tự động trích xất csdl bằng phần mềm usecase studio 2.
+
+
+
+
+
+Tất cả các đối tượng đều chai làm hai phần: view và form
+View: dữ liệu động ( là những dữ liệu mà csdl đổ vào giao diện ) và <<system>>navigate ( điều dướng ), hành động của người dùng trên view mà không do form quyết định 
+form: thuộc tính ( là những cái mà thằng người dùng làm trên form ( đăng nhập : thuộc tính alf tài khoản và mật khẩu ), và hành động trên form ( ấn nút đăng nhập ) 
