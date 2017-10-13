@@ -1,0 +1,46 @@
+﻿Mục đích: 
++ Lưu trữ code online lúc cần thì tải xuống
++ Có thể trao đổi code một cách chóng mặt A và B là một nhóm thì thằng A code ở file Afile thì thằng B cũng code được ở file
+Afile. 
++ Lưu lại toàn bộ thao tác của dự án để đến lúc có vấn đề thì có thể xem lại toàn bộ lịch sử
+
+ngày 1: a làm hỏng source code
+ngày 2: b làm hỏng source code 
+ngày n: hoàn thành dự án.
+lúc chốt dự án sếp sẽ trừ lường hai thằng a và b vì có lịch sử của github ghi lại
+
++ Giúp cho dự án trở nên dễ dàng hơn
+
+Sử dụng git
+Đầu tiên: có account github
+2. có thể sử dụng bash của git-scm sau đó install
+git push thì nó sẽ hiện ra thông báo cần email và tài khoản thì mọi ng nhập theo cú pháp
+
+==== lấy về một dự án khi sếp giao:
++ sếp sẽ tạo một repon
++ gửi link đến toàn bộ thành viên tgai dự án
++ các thành viên sẽ clone dự án đó về và bắt đầu làm.
+
+How: 
++ access to github contain links VD: https://github.com/trantoan960/livecode.git
++ member of project will access links and clone VD: git clone https://github.com/trantoan960/livecode.git
+
+==== xem tiến trình của dự án 
++ khởi động máy tính
++ clone dự án về/ update dự án
++ xem tình hình dự án
+
+How:
++ access to github contain links VD: https://github.com/trantoan960/livecode.git
++ member of project will access links and clone VD: git clone https://github.com/trantoan960/livecode.git
++ check status VD: git status
++ add file to git VD: git add * ( all of ) or tenfilegit 
++ encode file to git VD: git commit -m" Chú thích "
+
+git hub làm việc ntn? 
+git sẽ trao đổi từ một client đến server qua một bước trung gian: lưu file tạm thời ở client sau dó nhận lệnh ms đẩy lên server
+a ms mã hòa file đó đưa lên đường trên ( phóng tên lửa thì a ms đưa lên bệ phóng chứ a chưa phóng )
+cho phóng tên lửa thì sẽ dùng git push
+
+Note: lần đầu chờ lâu và phải đăng nhập tài khoản khi nó hiện lên 
+

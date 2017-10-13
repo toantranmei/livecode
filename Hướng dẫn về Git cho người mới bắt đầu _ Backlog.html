@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://backlog.com/git-tutorial/vn/ -->
+<html dir="ltr" lang="vi" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="keywords" content="Git, Phiên bản quản lý, Biểu đồ Gantt, Biều đồ Burndown, Quản lý dự án, Subversion, Backlog">
+	<meta name="description" content="Chào mừng bạn đến với trang hướng dẫn Git dành cho người mới bắt đầu sử dụng. Hãy học để trở nên chuyên nghiệp trong việc quản lý phiên bản bằng cách sử dụng Git.">
+    <title>Hướng dẫn về Git cho người mới bắt đầu | Backlog</title>
+    <meta property="og:title" content="Hướng dẫn về Git cho người mới bắt đầu | Backlog">
+    <meta property="og:description" content="Chào mừng bạn đến với trang hướng dẫn Git dành cho người mới bắt đầu sử dụng. Hãy học để trở nên chuyên nghiệp trong việc quản lý phiên bản bằng cách sử dụng Git.">
+    <meta property="og:url" content="http://backlogtool.com/git-guide/vn/">
+    <meta property="og:image" content="http://backlogtool.com/git-guide/vn/ogp_dft.png">
+    <meta property="og:type" content="article">
+    <meta property="fb:app_id" content="417292271624387">
+    <link rel="shortcut icon" href="https://backlog.com/git-tutorial/vn/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="all" href="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/style.css">
+    <!-- Google Tag Manager -->
+<script src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/cb=gapi.loaded_1" async=""></script><script src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/plusone.js.download" gapi_processed="true"></script><script id="twitter-wjs" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/widgets.js.download"></script><script id="facebook-jssdk" async="" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/sdk.js.download"></script><script async="" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/fbevents.js.download"></script><script type="text/javascript" async="" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/hotjar-299136.js.download"></script><script type="text/javascript" async="" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/analytics_debug.js.download"></script><script type="text/javascript" async="" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/Yox3591xmDUTIQiafbmDQA.js.download"></script><script async="" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/gtm.js.download"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TSQPXBL');</script>
+<!-- End Google Tag Manager -->    <!--[if lt IE 9]>
+        <script src="./js/lib/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<style type="text/css" media="screen">.uv-icon{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;-moz-transition:all 300ms;-o-transition:all 300ms;-webkit-transition:all 300ms;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;-moz-transition:opacity 100ms;-o-transition:opacity 100ms;-webkit-transition:opacity 100ms;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:white;position:relative;width:325px;height:325px;-moz-transition:background 200ms;-o-transition:background 200ms;-webkit-transition:background 200ms;transition:background 200ms}.uv-bottom .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;-moz-transition:border-top-color 200ms;-o-transition:border-top-color 200ms;-webkit-transition:border-top-color 200ms;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{-moz-transition:none !important;-webkit-transition:none !important;-o-transition:color 0 ease-in !important;transition:none !important}.uv-fade{opacity:1;-moz-transition:opacity 200ms ease-out;-o-transition:opacity 200ms ease-out;-webkit-transition:opacity 200ms ease-out;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;-moz-transition:all 80ms ease-out;-o-transition:all 80ms ease-out;-webkit-transition:all 80ms ease-out;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%);-ms-transform:scale(0.8) translateY(-15%);-webkit-transform:scale(0.8) translateY(-15%);transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(-10%);-ms-transform:scale(0.8) translateY(-15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(-10%);transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(10%);-ms-transform:scale(0.8) translateY(-15%) translateX(10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(10%);transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%);-ms-transform:scale(0.8) translateY(15%);-webkit-transform:scale(0.8) translateY(15%);transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(-10%);-ms-transform:scale(0.8) translateY(15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(15%) translateX(-10%);transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(10%);-ms-transform:scale(0.8) translateY(15%) translateX(10%);-webkit-transform:scale(0.8) translateY(15%) translateX(10%);transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%);-ms-transform:scale(0.8) translateX(15%);-webkit-transform:scale(0.8) translateX(15%);transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(-10%);-ms-transform:scale(0.8) translateX(15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(15%) translateY(-10%);transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(10%);-ms-transform:scale(0.8) translateX(15%) translateY(10%);-webkit-transform:scale(0.8) translateX(15%) translateY(10%);transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%);-ms-transform:scale(0.8) translateX(-15%);-webkit-transform:scale(0.8) translateX(-15%);transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(-10%);-ms-transform:scale(0.8) translateX(-15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(-10%);transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(10%);-ms-transform:scale(0.8) translateX(-15%) translateY(10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(10%);transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);-webkit-transform:translateY(-100%);transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{-moz-transform:translateY(100%);-ms-transform:translateY(100%);-webkit-transform:translateY(100%);transform:translateY(100%)}.uv-slide-left.uv-is-hidden{-moz-transform:translateX(-100%);-ms-transform:translateX(-100%);-webkit-transform:translateX(-100%);transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{-moz-transform:translateX(100%);-ms-transform:translateX(100%);-webkit-transform:translateX(100%);transform:translateX(100%)}
+</style><style type="text/css" media="print">#uvTab,.uv-tray,.uv-icon,.uv-popover,.uv-bubble{display:none!important}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}.fb_shrink_active{opacity:1;transform:scale(1, 1);transition-duration:200ms;transition-timing-function:ease-out}.fb_shrink_active:active{opacity:.5;transform:scale(.75, .75)}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(http://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><script type="text/javascript" charset="utf-8" async="" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/button.1585b4acb6f096ed5e99939a36e1789e.js.download"></script></head>
+<body class="Home" style="">
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript>&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSQPXBL"
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<!-- End Google Tag Manager (noscript) -->    <div id="container">
+        
+        <header id="header" role="banner">
+            <div class="Inner">
+                <h1><a href="https://backlog.com/git-tutorial/vn/">Hướng dẫn về Git cho người mới bắt đầu</a></h1>
+                <a class="btn-contents" href="https://backlog.com/git-tutorial/vn/contents/"><span>Sơ đồ trang</span><span class="Bg"></span></a>
+                <ul id="socials" class="Socials Cf" style="display: block;">
+                    <!-- #socials -->
+                <li class="Facebook"><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/18W0fzbK7xg.html" style="border: none;"></iframe></div></div></div><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.async = true; js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=417292271624387&version=v2.0"; fjs.parentNode.insertBefore(js, fjs); }(document, "script", "facebook-jssdk"));</script><div class="fb-like fb_iframe_widget" data-href="http://backlogtool.com/git-guide/vn/" data-send="false" data-layout="button_count" data-width="110" data-show-faces="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=417292271624387&amp;container_width=110&amp;href=http%3A%2F%2Fbacklogtool.com%2Fgit-guide%2Fvn%2F&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=110"><span style="vertical-align: bottom; width: 74px; height: 20px;"><iframe name="f35650819f70f74" width="110px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/like.html" style="border: none; visibility: visible; width: 74px; height: 20px;" class=""></iframe></span></div></li><li class="Twitter"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/tweet_button.f7323036818f270c17ea2eebc8e6be4f.vi.html" style="position: static; visibility: visible; width: 60px; height: 20px;" data-url="http://backlogtool.com/git-guide/vn/"></iframe><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li><li class="Google"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 32px; height: 20px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 32px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1507915398662" name="I0_1507915398662" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/fastbutton.html" data-gapiattached="true" title="G+"></iframe></div><script type="text/javascript"> window.___gcfg = {lang: "vi"}; (function() { var po = document.createElement("script"); po.type = "text/javascript"; po.async = true; po.src = "https://apis.google.com/js/plusone.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s); })(); </script></li></ul>
+
+                <nav id="nav">
+                    <ul class="Cf">
+                        <li><a href="https://backlog.com/git-tutorial/vn/intro/intro1_1.html">Nhập môn</a></li>
+                        <li><a href="https://backlog.com/git-tutorial/vn/stepup/stepup1_1.html">Phát triển</a></li>
+                        <li><a href="https://backlog.com/git-tutorial/vn/reference/">Tài liệu tham khảo</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- #header -->
+        </header>
+
+        <div id="content">
+            <div id="main" role="main">
+                <section class="Home-intro">
+                    <hgroup id="hgroup">
+                        <h1>Hướng dẫn về Git cho người mới bắt đầu -- Sử dụng hệ thống quản lý phiên bản của Git cách chuyên nghiệp</h1>
+                        <h2>Chào mừng bạn đến với trang hướng dẫn Git dành cho người mới bắt đầu sử dụng. Tại đây, chúng tôi sẽ hướng dẫn bạn dùng Git để quản lý các phiên bản một cách thành thạo. Có 3 phần trong hướng dẫn này. Nếu Git hoàn toàn mới mẻ với bạn, bạn có thể bắt đầu khám phá từ phần Nhập môn. Người dùng đã từng sử dụng Git thì có thể chuyển đến phần Phát triển để tìm hiểu sâu hơn về ứng dụng này. Phần thứ ba là phần Tài liệu tham khảo nhằm hỗ trợ cho các trường hợp cụ thể.</h2>
+                    </hgroup>
+                    <ul class="Home-menu">
+                        <li class="Intro"><a href="https://backlog.com/git-tutorial/vn/intro/intro1_1.html">Nhập môn</a></li>
+                        <li class="Stepup"><a href="https://backlog.com/git-tutorial/vn/stepup/stepup1_1.html">Phát triển</a></li>
+                        <li class="Inverted"><a href="https://backlog.com/git-tutorial/vn/reference/">Tài liệu tham khảo</a></li>
+                    </ul>
+                    <!-- .Home-intro -->
+                </section>
+                <!--
+                <section class="Books">
+                    <h1>E-book version available</h1>
+                    <div class="Group Cf">
+                        <section class="Item EPub">
+                            <h2> ePub version (you can download directly to iBooks) </h2>
+                            <ul>
+                                <li><a href="./download/epub/git-monkey-for-console.epub"> for console 6.6M </a></li>
+                                <li><a href="./download/epub/git-monkey-for-windows.epub">for Windows(GUI) 6.6M</a></li>
+                                <li><a href="./download/epub/git-monkey-for-mac.epub">for Mac OS X(GUI) 6.6M</a></li>
+                            </ul>
+                        </section>
+                        <section class="Item Kindle">
+                            <h2>Kindle version</h2>
+                            <ul>
+                                <li><a href="./download/kindle/git-monkey-for-console.mobi"> for console 2.8M </a></li>
+                                <li><a href="./download/kindle/git-monkey-for-windows.mobi">for Windows(GUI) 4.3M</a></li>
+                                <li><a href="./download/kindle/git-monkey-for-mac.mobi">for Mac OS X(GUI) 5.4M</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </section>
+            -->
+                <!-- #main -->
+            </div>
+            <!-- #content -->
+        </div>
+
+        
+        <footer id="footer" role="contentinfo">
+            <div class="Row">
+                <div class="Col Right">
+                    <div class="Languages">
+                        <div class="Languages-inner Clearfix">
+                            <span class="Pick-language">Tiếng Việt</span>
+                            <span class="Pick-down"></span>
+                            <select id="languageMenu" name="languageMenu" class="Language-menu" onchange="selectLanguage(this)">
+                                <option value="http://backlogtool.com/git-tutorial/en/">English</option>
+                                <option value="http://www.backlog.jp/git-guide/">日本語</option>
+                                <option value="http://backlogtool.com/git-tutorial/cn/">简体中文</option>
+                                <option value="http://backlogtool.com/git-tutorial/tw/">繁體中文</option>
+                                <option value="http://backlogtool.com/git-tutorial/kr/">한국어</option>
+                                <option selected="" value="http://backlogtool.com/git-tutorial/vn/">Tiếng Việt</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- .Languages-area -->
+                    <ul class="Social-icon">
+                        <li><a href="https://www.facebook.com/BacklogVN" target="_blank">
+                        <img src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/ico_facebook.png" srcset="./img/common/icon/ico_facebook.png 1x, ./img/common/icon/ico_facebook@2x.png 2x" width="36" height="36" alt="Facebook"></a></li><li><a href="https://twitter.com/Backlogtool" target="_blank"><img src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/ico_twitter.png" srcset="./img/common/icon/ico_twitter.png 1x, ./img/common/icon/ico_twitter@2x.png 2x" width="36" height="36" alt="twitter"></a></li>
+                    </ul>
+                </div>
+                <div class="Col Left">
+                    <div class="Powered">Powered by<br>
+                        <a href="http://backlogtool.com/vn/" target="_blank" title="Backlog">
+                        <img src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/logo_backlog.png" srcset="./img/common/logo_backlog.png 1x, ./img/common/logo_backlog@2x.png 2x" width="142" height="42" alt="Backlog - Công cụ quản lý dự án dành cho tất cả mọi người đang làm việc trong nhóm"></a>
+                    </div>
+                    <p class="Nulab">Copyright © 2004-2017 Nulab Inc. All rights reserved. </p>
+                </div>
+            </div>
+            <!-- #footer -->
+        </footer>
+
+        <div class="Top-link"><a id="topLink" href="https://backlog.com/git-tutorial/vn/#">UP</a></div>
+        <div id="showUserVoicePopupTab" data-uv-trigger="smartvote" data-uv-scanned="true">
+            <a href="http://feedback.backlogtool.com/forums/247190" title="">Phản hồi</a>
+        </div>
+
+        <!-- #container -->
+    </div>
+    
+    <script src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/jquery.min.js.download"></script>
+    <script>window.jQuery || document.write('<script src="./js/lib/jquery.js"><\/script>')</script>
+    <script type="text/javascript" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/jquery.config.js.download"></script>
+    <script type="text/javascript">
+        function selectLanguage(lang) {
+            window.location.href = lang.options[lang.selectedIndex].value;
+        }
+    </script>
+    <script>(function(){
+        var uv=document.createElement('script');
+        uv.type='text/javascript';
+        uv.async=true;
+        uv.src='//widget.uservoice.com/Yox3591xmDUTIQiafbmDQA.js';
+        var s=document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(uv,s);
+        uv.onload = uv.onreadystatechange = function(){
+            var state = uv.readyState;
+            if(!state || /complete|loaded/.test(state)){
+                UserVoice.push(['set', {
+                    forum_id: '265483'
+                }]);
+                uv.onload = uv.onreadystatechange = null;
+            }
+        }
+    })();</script>
+    <script type="text/javascript">
+        var tweetBtn, googleBtn, likeBtn;
+        tweetBtn =
+            '<li class="Twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://backlogtool.com/git-guide/vn/" data-text="Hướng dẫn về Git cho người mới bắt đầu | Backlog">Tweet</a>'
+            + '<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");<\/script></li>';
+        likeBtn =
+            '<li class="Facebook"><div id="fb-root"></div>'
+            +'<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.async = true; js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=417292271624387&version=v2.0"; fjs.parentNode.insertBefore(js, fjs); }(document, "script", "facebook-jssdk"));<\/script>'
+            +'<div class="fb-like" data-href="http://backlogtool.com/git-guide/vn/" data-send="false" data-layout="button_count" data-width="110" data-show-faces="false"></div></li>';
+        googleBtn =
+            '<li class="Google"><g:plusone size="medium" href="http://backlogtool.com/git-guide/vn/"></g:plusone>'
+            +'<script type="text/javascript"> window.___gcfg = {lang: "vi"}; (function() { var po = document.createElement("script"); po.type = "text/javascript"; po.async = true; po.src = "https://apis.google.com/js/plusone.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s); })(); <\/script></li>';
+
+        setTimeout(function() {
+            $('#socials').append(likeBtn + tweetBtn + googleBtn);
+        },1000);
+    </script>
+
+
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","328636544259436");fbq("track","PageView");</script>
+<noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=328636544259436&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript>
+
+
+<script type="text/javascript" id="">fbq("track","ViewContent",{value:3.5,currency:"USD"});</script><iframe name="oauth2relay425980547" id="oauth2relay425980547" src="./Hướng dẫn về Git cho người mới bắt đầu _ Backlog_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>
