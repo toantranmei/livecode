@@ -1,9 +1,9 @@
-﻿Mục đích: 
+Mục đích: 
 + Lưu trữ code online lúc cần thì tải xuống
 + Có thể trao đổi code một cách chóng mặt A và B là một nhóm thì thằng A code ở file Afile thì thằng B cũng code được ở file
 Afile. 
 + Lưu lại toàn bộ thao tác của dự án để đến lúc có vấn đề thì có thể xem lại toàn bộ lịch sử
-
+aaaaaaaaaaa
 ngày 1: a làm hỏng source code
 ngày 2: b làm hỏng source code 
 ngày n: hoàn thành dự án.
